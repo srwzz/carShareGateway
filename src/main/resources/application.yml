@@ -44,19 +44,19 @@ spring:
     gateway:
       routes:
         - id: order
-          uri: http://order:8080
+          uri: http://carshareorder:8080
           predicates:
             - Path=/orders/** 
         - id: delivery
-          uri: http://delivery:8080
+          uri: http://carsharedelivery:8080
           predicates:
             - Path=/deliveries/**,/cancellations/**
         - id: statusview
-          uri: http://statusview:8080
+          uri: http://carsharestatusview:8080
           predicates:
             - Path= /customerpages/**
         - id: payment
-          uri: http://payment:8080
+          uri: http://carsharepayment:8080
           predicates:
             - Path=/payments/**,/paymentCancellations/**
       globalcors:
