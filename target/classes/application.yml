@@ -11,7 +11,7 @@ spring:
         - id: order
           uri: http://localhost:8081
           predicates:
-            - Path=/orders/** 
+            - Path=/stocks/** 
         - id: delivery
           uri: http://localhost:8082
           predicates:
@@ -27,7 +27,7 @@ spring:
         - id: stock
           uri: http://localhost:8085
           predicates:
-            - Path=/stocks/** 
+            - Path=/orders/** 
       globalcors:
         corsConfigurations:
           '[/**]':
@@ -50,7 +50,7 @@ spring:
         - id: order
           uri: http://order:8080
           predicates:
-            - Path=/orders/** 
+            - Path=/stocks/** 
         - id: delivery
           uri: http://delivery:8080
           predicates:
@@ -66,7 +66,7 @@ spring:
         - id: stock
           uri: http://stock:8080
           predicates:
-            - Path=/stocks/** 
+            - Path=/orders/** 
       globalcors:
         corsConfigurations:
           '[/**]':
