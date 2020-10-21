@@ -64,7 +64,7 @@ spring:
           predicates:
             - Path=/payments/**,/paymentCancellations/**
         - id: stock
-          uri: http://stock:8080
+          uri: http://carsharestock:8080
           predicates:
             - Path=/stocks/** 
       globalcors:
